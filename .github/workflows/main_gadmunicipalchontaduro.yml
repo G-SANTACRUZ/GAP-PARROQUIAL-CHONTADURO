@@ -20,13 +20,12 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_95EA287671CF4169953E4D70BD7138B8 }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-- name: Deploy to Azure Web App
-  uses: azure/webapps-deploy@v3
-  with:
-    app-name: gadmunicipalchontaduro
-    slot-name: Production
-    package: .
-
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: gadmunicipalchontaduro
+          slot-name: Production
+          package: .
 
 
 
